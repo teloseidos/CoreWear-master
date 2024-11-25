@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denim - CoreWear</title>
+    <link rel="stylesheet" href="cw.css">
+</head>
+<body>
+
+    <!-- Main Title Section -->
+    <section class="main-title">
+        <h1>Core Wear - Denim</h1>
+    </section>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">Shop</button>
+            <div class="dropdown-content">
+                <button class="shop-btn" onclick="window.location.href='shopall.html'">Shop All</button>
+                <button class="shop-btn" onclick="window.location.href='index.html'">Home</button>
+                
+            
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." id="searchInput">
+        </div>
+        <!-- Cart in the Navbar -->
+        <div id="cart-icon">
+            <!-- Cart quantity will update dynamically -->
+            <button id="cart-button" onclick="goToCartPage()">Cart (<span id="cart-quantity">0</span>)</button>
+        </div>
+
+        <!-- Cart Dropdown -->
+        <div id="cart-dropdown" style="display: none;">
+            <div id="cart-items"></div> <!-- Cart items will populate here -->
+        </div>
+
+    </nav>
+
+    <!-- Tees Section -->
+    <section class="best-sellers">
+        <h2>Denim</h2>
+        <div class="product-grid">
+            <!-- Faded Jeans -->
+            <div class="product-card" onclick="showProductDetails('Faded Jeans', '$30', 'jean1.png')">
+                <img src="jean1.png" alt="Faded Jeans">
+                <p class="product-name">Faded Jeans</p>
+                <p class="product-price">$30</p>
+                <button class="add-to-cart" onclick="addToCart('Faded Jeans', '$30')">Add to Cart</button>
+            </div>
+            <!-- Blue Wash Jeans -->
+            <div class="product-card" onclick="showProductDetails('Blue Wash Jeans', '$30', 'jean2.png')">
+                <img src="jean2.png" alt="Blue Wash Jeans">
+                <p class="product-name">Blue Wash Jeans</p>
+                <p class="product-price">$30</p>
+                <button class="add-to-cart" onclick="addToCart('Blue Wash Jeans', '$30')">Add to Cart</button>
+            </div>
+            <!-- Distressed Jean Jacket -->
+            <div class="product-card" onclick="showProductDetails('Distressed Denim Jacket', '$45', 'jj1.png')">
+                <img src="jj1.png" alt="Distressed Jean Jacket">
+                <p class="product-name">Distressed Denim Jacket</p>
+                <p class="product-price">$45</p>
+                <button class="add-to-cart" onclick="addToCart('Distressed Denim Jacket', '$45')">Add to Cart</button>
+            </div>
+            <!-- Light Wash Jean Jacket -->
+            <div class="product-card" onclick="showProductDetails('Light Wash Denim Jacket', '$45', 'jj2.png')">
+                <img src="jj2.png" alt="Light Wash Jean Jacket">
+                <p class="product-name">Light Wash Denim Jacket</p>
+                <p class="product-price">$45</p>
+                <button class="add-to-cart" onclick="addToCart('Light Wash Denim Jacket', '$45')">Add to Cart</button>
+            </div>
+            <!-- Dark Blue Jean Shorts -->
+            <div class="product-card" onclick="showProductDetails('Dark Blue Denim Shorts', '$20', 'jshort.png')">
+                <img src="jshort.png" alt="Dark Blue Jean Shorts">
+                <p class="product-name">Dark Blue Denim Shorts</p>
+                <p class="product-price">$20</p>
+                <button class="add-to-cart" onclick="addToCart('Dark Blue Denim Shorts', '$20')">Add to Cart</button>
+            </div>
+            <!-- Light Wash Overalls -->
+            <div class="product-card" onclick="showProductDetails('Light Wash Denim Overalls', '$40', 'overall.png')">
+                <img src="overall.png" alt="Light Wash Overalls">
+                <p class="product-name">Light Wash Denim Overalls</p>
+                <p class="product-price">$40</p>
+                <button class="add-to-cart" onclick="addToCart('Light Wash Denim Overalls', '$40')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+  <!-- Product Details Modal -->
+  <div id="product-modal" class="product-modal">
+    <div class="product-modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-content">
+            <!-- Product details will be injected here dynamically -->
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <p>&copy; 2024 Core Wear. Unisex Basics.</p>
+</footer>
+
+    <script src="corewear.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweatshirts & Hoodies - CoreWear</title>
+    <link rel="stylesheet" href="cw.css">
+</head>
+<body>
+
+    <!-- Main Title Section -->
+    <section class="main-title">
+        <h1>Core Wear - Sweatshirts & Hoodies</h1>
+    </section>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">Shop</button>
+            <div class="dropdown-content">
+                <button class="shop-btn" onclick="window.location.href='shopall.html'">Shop All</button>
+                <button class="shop-btn" onclick="window.location.href='index.html'">Home</button>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." id="searchInput">
+        </div>
+        <!-- Cart in the Navbar -->
+        <div id="cart-icon">
+            <!-- Cart quantity will update dynamically -->
+               <button id="cart-button" onclick="goToCartPage()">Cart (<span id="cart-quantity">0</span>)</button>
+           </div>
+
+        <!-- Cart Dropdown -->
+        <div id="cart-dropdown" style="display: none;">
+            <div id="cart-items"></div> <!-- Cart items will populate here -->
+        </div>
+    </nav>
+
+    <!-- Sweatshirts/Hoodies Section -->
+    <section class="best-sellers">
+        <h2>Sweatshirts & Hoodies</h2>
+        <div class="product-grid">
+            <!-- Black Hoodie -->
+            <div class="product-card" onclick="showProductDetails('Black Hoodie', '$45', 'blackhood.png')">
+                <img src="blackhood.png" alt="Black Hoodie">
+                <p class="product-name">Black Hoodie</p>
+                <p class="product-price">$45</p>
+                <button class="add-to-cart" onclick="addToCart('Black Hoodie', '$45')">Add to Cart</button>
+            </div>
+            <!-- Black Sweatshirt -->
+            <div class="product-card" onclick="showProductDetails('Black Sweatshirt', '$40', 'blacksweat.png')">
+                <img src="blacksweat.png" alt="Black Sweatshirt">
+                <p class="product-name">Black Sweatshirt</p>
+                <p class="product-price">$40</p>
+                <button class="add-to-cart" onclick="addToCart('Black Sweatshirt', '$40')">Add to Cart</button>
+            </div>
+            <!-- Dark Grey Hoodie -->
+            <div class="product-card" onclick="showProductDetails('Dark Grey Hoodie', '$45', 'dghood.png')">
+                <img src="dghood.png" alt="Dark Grey Hoodie">
+                <p class="product-name">Dark Grey Hoodie</p>
+                <p class="product-price">$45</p>
+                <button class="add-to-cart" onclick="addToCart('Dark Grey Hoodie', '$45')">Add to Cart</button>
+            </div>
+            <!-- Dark Grey Sweatshirt -->
+            <div class="product-card" onclick="showProductDetails('Dark Grey Sweatshirt', '$40', 'dgsweat.png')">
+                <img src="dgsweat.png" alt="Dark Grey Sweatshirt">
+                <p class="product-name">Dark Grey Sweatshirt</p>
+                <p class="product-price">$40</p>
+                <button class="add-to-cart" onclick="addToCart('Dark Grey Sweatshirt', '$40')">Add to Cart</button>
+            </div>
+            <!-- Navy Hoodie -->
+            <div class="product-card" onclick="showProductDetails('Navy Hoodie', '$45', 'navyhood.png')">
+                <img src="navyhood.png" alt="Navy Hoodie">
+                <p class="product-name">Navy Hoodie</p>
+                <p class="product-price">$45</p>
+                <button class="add-to-cart" onclick="addToCart('Navy Hoodie', '$45')">Add to Cart</button>
+            </div>
+            <!-- Navy Sweatshirt -->
+            <div class="product-card" onclick="showProductDetails('Navy Sweatshirt', '$40', 'navysweat.png')">
+                <img src="navysweat.png" alt="Navy Sweatshirt">
+                <p class="product-name">Navy Sweatshirt</p>
+                <p class="product-price">$40</p>
+                <button class="add-to-cart" onclick="addToCart('Navy Sweatshirt', '$40')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details Modal -->
+    <div id="product-modal" class="product-modal">
+        <div class="product-modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-content">
+                <!-- Product details will be injected here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Core Wear. Unisex Basics.</p>
+    </footer>
+
+    <script src="corewear.js"></script>
+</body>
+</html>
+
+
+            

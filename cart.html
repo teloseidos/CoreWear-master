@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - CoreWear</title>
+    <link rel="stylesheet" href="cw.css">
+    <script src="corewear.js" defer></script>
+</head>
+<style>
+    /* Paste the Cart Page Specific Styles CSS here */
+    /* Cart Page Specific Styles */
+.cart-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: 'Helvetica Neue', 'Segoe UI', 'Roboto', sans-serif; /* Ensure this page uses the updated font */
+}
+
+.cart-page h2 {
+    font-size: 2em;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item h3 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+.cart-item-remove {
+    background-color: #afafaf;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item-remove:hover {
+    background-color: #ff0000;
+}
+
+.cart-total {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #444;
+    margin-top: 20px;
+    text-align: right;
+}
+
+</style>
+
+<body>
+    <!-- Header -->
+    <section class="main-title">
+        <h1>Your Shopping Cart</h1>
+    </section>
+    <!-- Main Content -->
+    <main>
+        <div id="cart-page-items"></div> <!-- Cart items will be dynamically added here -->
+        <p id="cart-page-total"></p> <!-- Total price will be displayed here -->
+    </main>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>Unisex Basics - CoreWear</p>
+    </footer>
+</body>
+</html>

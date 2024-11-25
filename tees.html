@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tees - CoreWear</title>
+    <link rel="stylesheet" href="cw.css">
+</head>
+<body>
+
+    <!-- Main Title Section -->
+    <section class="main-title">
+        <h1>Core Wear - Tees</h1>
+    </section>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">Shop</button>
+            <div class="dropdown-content">
+                <button class="shop-btn" onclick="window.location.href='shopall.html'">Shop All</button>
+                <button class="shop-btn" onclick="window.location.href='index.html'">Home</button>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." id="searchInput">
+        </div>
+        <!-- Cart in the Navbar -->
+        <div id="cart-icon">
+            <!-- Cart quantity will update dynamically -->
+            <button id="cart-button" onclick="goToCartPage()">Cart (<span id="cart-quantity">0</span>)</button>
+        </div>
+
+        <!-- Cart Dropdown -->
+        <div id="cart-dropdown" style="display: none;">
+            <div id="cart-items"></div> <!-- Cart items will populate here -->
+        </div>
+    </nav>
+
+    <!-- Tees Section -->
+    <section class="best-sellers">
+        <h2>Tees</h2>
+        <div class="product-grid">
+            <!-- White Tee -->
+            <div class="product-card" onclick="showProductDetails('White Tee', '$15', 'whitetee.png')">
+                <img src="whitetee.png" alt="White Tee">
+                <p class="product-name">White Tee</p>
+                <p class="product-price">$15</p>
+                <button class="add-to-cart" onclick="addToCart('White Tee', '$15')">Add to Cart</button>
+            </div>
+
+            <!-- Tan Tee -->
+            <div class="product-card" onclick="showProductDetails('Tan Tee', '$15', 'tanshirt.png')">
+                <img src="tanshirt.png" alt="Tan Tee">
+                <p class="product-name">Tan Tee</p>
+                <p class="product-price">$15</p>
+                <button class="add-to-cart" onclick="addToCart('Tan Tee', '$15')">Add to Cart</button>
+            </div>
+
+            <!-- Grey Tee -->
+            <div class="product-card" onclick="showProductDetails('Grey Tee', '$15', 'greyshirt.png')">
+                <img src="greyshirt.png" alt="Grey Tee">
+                <p class="product-name">Grey Tee</p>
+                <p class="product-price">$15</p>
+                <button class="add-to-cart" onclick="addToCart('Grey Tee', '$15')">Add to Cart</button>
+            </div>
+
+            <!-- Green Tee -->
+            <div class="product-card" onclick="showProductDetails('Green Tee', '$15', 'greenshirt.png')">
+                <img src="greenshirt.png" alt="Green Tee">
+                <p class="product-name">Green Tee</p>
+                <p class="product-price">$15</p>
+                <button class="add-to-cart" onclick="addToCart('Green Tee', '$15')">Add to Cart</button>
+            </div>
+
+            <!-- Black Tee -->
+            <div class="product-card" onclick="showProductDetails('Black Tee', '$15', 'blacktee.png')">
+                <img src="blacktee.png" alt="Black Tee">
+                <p class="product-name">Black Tee</p>
+                <p class="product-price">$15</p>
+                <button class="add-to-cart" onclick="addToCart('Black Tee', '$15')">Add to Cart</button>
+            </div>
+
+            <!-- Brown Shirt -->
+            <div class="product-card" onclick="showProductDetails('Brown Tee', '$15', 'brownshirt.png')">
+                <img src="brownshirt.png" alt="Brown Shirt">
+                <p class="product-name">Brown Shirt</p>
+                <p class="product-price">$15</p>
+                <button class="add-to-cart" onclick="addToCart('Brown Shirt', '$15')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+  <!-- Product Details Modal -->
+  <div id="product-modal" class="product-modal">
+    <div class="product-modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-content">
+            <!-- Product details will be injected here dynamically -->
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <p>&copy; 2024 Core Wear. Unisex Basics.</p>
+</footer>
+
+
+    <script src="corewear.js"></script>
+</body>
+</html>
